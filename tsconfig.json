@@ -13,19 +13,20 @@
     "target": "ES2022",
     "module": "preserve",
     "paths": {
-      "@core": [
-        "src/app/app/core/*"
+      "@core/*": [
+        "app/core/*"
       ],
-      "@shared": [
-        "src/app/app/shared/*"
+      "@shared/*": [
+        "app/shared/*"
       ],
-      "@features": [
-        "src/app/app/features/*"
+      "@features/*": [
+        "app/features/*"
       ],
-      "@styles": [
-        "src/app/app/styles/*"
+      "@styles/*": [
+        "app/styles/*"
       ]
-    }
+    },
+    "baseUrl": "src"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
