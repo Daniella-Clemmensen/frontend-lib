@@ -7,6 +7,7 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
+    "sync-paths": "node src/scripts/generate-path-aliases.js",
     "serve:ssr:frontend-lib": "node dist/frontend-lib/server/server.mjs"
   },
   "private": true,
@@ -40,6 +41,7 @@
     "karma-coverage": "~2.2.0",
     "karma-jasmine": "~5.1.0",
     "karma-jasmine-html-reporter": "~2.1.0",
+    "strip-json-comments": "^5.0.2",
     "typescript": "~5.8.2"
   }
 }
