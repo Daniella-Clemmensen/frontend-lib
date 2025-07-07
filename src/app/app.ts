@@ -6,7 +6,7 @@ import { SharedModule } from '@shared/shared.module';
   standalone: true,
   imports: [SharedModule],
   templateUrl: './app.html',
-  styleUrl: './app.scss'
+
 })
 export class App {
   protected title = 'frontend-lib';
