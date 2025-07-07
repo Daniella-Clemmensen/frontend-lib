@@ -1,4 +1,5 @@
 {
+  "extends": "./tsconfig.paths.json", // ✅ added
   "compileOnSave": false,
   "compilerOptions": {
     "strict": true,
@@ -11,22 +12,7 @@
     "experimentalDecorators": true,
     "importHelpers": true,
     "target": "ES2022",
-    "module": "preserve",
-    "paths": {
-      "@core/*": [
-        "app/core/*"
-      ],
-      "@shared/*": [
-        "app/shared/*"
-      ],
-      "@features/*": [
-        "app/features/*"
-      ],
-      "@styles/*": [
-        "app/styles/*"
-      ]
-    },
-    "baseUrl": "src"
+    "module": "preserve"
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,
