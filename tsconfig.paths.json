@@ -1,0 +1,73 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@core/*": [
+        "app/core/*"
+      ],
+      "@core/guards/*": [
+        "app/core/guards/*"
+      ],
+      "@core/services/*": [
+        "app/core/services/*"
+      ],
+      "@pages/*": [
+        "app/pages/*"
+      ],
+      "@pages/about-page/*": [
+        "app/pages/about-page/*"
+      ],
+      "@pages/home-page/*": [
+        "app/pages/home-page/*"
+      ],
+      "@shared/*": [
+        "app/shared/*"
+      ],
+      "@shared/layout/*": [
+        "app/shared/layout/*"
+      ],
+      "@shared/ui/*": [
+        "app/shared/ui/*"
+      ],
+      "@shared/ui/atoms/*": [
+        "app/shared/ui/atoms/*"
+      ],
+      "@shared/ui/atoms/button/*": [
+        "app/shared/ui/atoms/button/*"
+      ],
+      "@shared/ui/atoms/hamburger-button/*": [
+        "app/shared/ui/atoms/hamburger-button/*"
+      ],
+      "@shared/ui/atoms/icon/*": [
+        "app/shared/ui/atoms/icon/*"
+      ],
+      "@shared/ui/atoms/text-logo/*": [
+        "app/shared/ui/atoms/text-logo/*"
+      ],
+      "@shared/ui/molecules/*": [
+        "app/shared/ui/molecules/*"
+      ],
+      "@shared/ui/molecules/logo/*": [
+        "app/shared/ui/molecules/logo/*"
+      ],
+      "@shared/ui/molecules/nav-item/*": [
+        "app/shared/ui/molecules/nav-item/*"
+      ],
+      "@shared/ui/molecules/theme-toggle/*": [
+        "app/shared/ui/molecules/theme-toggle/*"
+      ],
+      "@shared/ui/organisms/*": [
+        "app/shared/ui/organisms/*"
+      ],
+      "@shared/ui/organisms/navbar/*": [
+        "app/shared/ui/organisms/navbar/*"
+      ],
+      "@shared/utils/*": [
+        "app/shared/utils/*"
+      ],
+      "@styles/*": [
+        "app/styles/*"
+      ]
+    }
+  }
+}
