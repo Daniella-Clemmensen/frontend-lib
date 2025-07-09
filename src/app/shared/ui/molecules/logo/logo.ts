@@ -1,8 +1,9 @@
 import { Component } from '@angular/core';
+import { SharedModule } from '@shared/shared.module';
 
 @Component({
   selector: 'app-logo',
-  imports: [],
+  imports: [SharedModule],
   templateUrl: './logo.html',
   styles: ``
 })

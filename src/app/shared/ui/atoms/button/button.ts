@@ -1,11 +1,13 @@
-import { Component } from '@angular/core';
-
+import { Component, Input } from '@angular/core';
+import { SharedModule } from '@shared/shared.module';
 @Component({
   selector: 'app-button',
-  imports: [],
+  standalone: true,
+  imports: [SharedModule],
   templateUrl: './button.html',
-  styles: ``
 })
-export class Button {
-
+export class ButtonComponent {
+  @Input() type: 'button' | 'submit' | 'reset' = 'button';
+  @Input() variant: 'primary' | 'secondary' | 'outline' = 'primary';
+  @Input() disabled = false;
 }
