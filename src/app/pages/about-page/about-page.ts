@@ -4,7 +4,6 @@ import { Component } from '@angular/core';
   selector: 'app-about-page',
   imports: [],
   templateUrl: './about-page.html',
-  styles: ``
 })
 export class AboutPage {
 
