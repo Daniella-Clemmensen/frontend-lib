@@ -1,9 +1,10 @@
 {
+  "$schema": "http://json.schemastore.org/schematics",
   "schematics": {
     "standalone-component-with-shared": {
       "description": "Generate a standalone component with SharedModule",
-      "factory": "./src/standalone-component-with-shared/index#standaloneComponent",
-      "schema": "./src/standalone-component-with-shared/schema.json"
+      "factory": "./standalone-component-with-shared/index#standaloneComponent",
+      "schema": "./standalone-component-with-shared/schema.json"
     }
   }
 }
