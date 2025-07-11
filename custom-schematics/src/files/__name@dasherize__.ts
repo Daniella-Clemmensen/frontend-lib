@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { SharedModule } from '../../../shared.module';
+import { SharedModule } from '@shared/shared.module';
 @Component({
   selector: 'app-__name@dasherize__',
   standalone: true,
