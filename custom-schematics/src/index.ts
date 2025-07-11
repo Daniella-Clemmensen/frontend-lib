@@ -8,9 +8,9 @@ import {
   url
 } from '@angular-devkit/schematics';
 import { strings } from '@angular-devkit/core';
-import { Schema as ComponentSchema } from './schema';
+import { Schema } from './schema';
 
-export function standaloneComponent(options: ComponentSchema): Rule {
+export function standaloneComponent(options:Schema ): Rule {
   return () => {
     const sourceTemplate = url('./files');
 
