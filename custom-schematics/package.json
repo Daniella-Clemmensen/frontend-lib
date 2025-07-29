@@ -3,6 +3,8 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "schematics": "./collection.json",
+  "type": "commonjs",
   "dependencies": {
     "@angular-devkit/core": "^20.1.0",
     "@angular-devkit/schematics": "^20.1.0",
@@ -14,10 +16,8 @@
     "cli-spinners": "^2.9.2"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "type": "commonjs"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "tsc",
+    "postbuild": "copy src\\component-with-shared\\schema.json dist\\component-with-shared\\schema.json"
+  }
 }
