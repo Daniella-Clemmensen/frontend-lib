@@ -1,0 +1,10 @@
+{
+  "$schema": "../node_modules/@angular-devkit/schematics/collection-schema.json",
+  "schematics": {
+    "component-with-shared": {
+      "description": "Component with SharedModule auto-import",
+      "factory": "./dist/component-with-shared/index#componentWithShared",
+      "schema": "./dist/component-with-shared/schema.json"
+    }
+  }
+}
