@@ -5,7 +5,7 @@ import { SharedModule } from '@shared/shared.module';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, SharedModule],
   template: `<router-outlet />`,
 })
 export class App {

@@ -18,47 +18,19 @@ import * as ts from 'typescript';
 import { InsertChange } from '@schematics/angular/utility/change';
 
 export function componentWithShared(options: ComponentOptions): Rule {
-  return async (tree: Tree, _context: SchematicContext) => {
-    const componentRule = await externalSchematic(
-      '@schematics/angular',
-      'component',
-      {
+  return (tree: Tree, _context: SchematicContext) => {
+    const name = strings.dasherize(options.name);
+    const className = strings.classify(options.name);
+    const targetPath = normalize(`${options.path || 'src/app'}/${name}`);
+
+    const templateSource = apply(url('./files'), [
+      template({
         ...options,
-        style: 'scss',
-        inlineStyle: false,
-        inlineTemplate: false,
-      }
-    );
+        ...strings,
+      }),
+      move(targetPath),
+    ]);
 
-    const sharedImportRule: Rule = (tree: Tree) => {
-      const modulePath = normalize(`${options.path}/${options.module}`);
-      const buffer = tree.read(modulePath);
-      if (!buffer) return tree;
-
-      const sourceText = buffer.toString('utf-8');
-      const source = ts.createSourceFile(
-        modulePath,
-        sourceText,
-        ts.ScriptTarget.Latest,
-        true
-      );
-      const changes = addImportToModule(
-        source,
-        modulePath,
-        'SharedModule',
-        './shared.module'
-      );
-
-      const recorder = tree.beginUpdate(modulePath);
-      for (const change of changes) {
-        if (change instanceof InsertChange) {
-          recorder.insertLeft(change.pos, change.toAdd);
-        }
-      }
-      tree.commitUpdate(recorder);
-      return tree;
-    };
-
-    return chain([componentRule, sharedImportRule]);
+    return chain([mergeWith(templateSource)]);
   };
 }
