@@ -18,10 +18,13 @@ import * as ts from 'typescript';
 import { InsertChange } from '@schematics/angular/utility/change';
 
 export function componentWithShared(options: ComponentOptions): Rule {
-  return (tree: Tree, _context: SchematicContext) => {
+  return (tree: Tree, context: SchematicContext) => {
+    context.logger.info(`🔧 Running custom schematic with name: ${options.name}`);
+    
     const name = strings.dasherize(options.name);
     const className = strings.classify(options.name);
     const targetPath = normalize(`${options.path || 'src/app'}/${name}`);
+    context.logger.info(`📁 Target path: ${targetPath}`);
 
     const templateSource = apply(url('./files'), [
       template({
@@ -31,6 +34,9 @@ export function componentWithShared(options: ComponentOptions): Rule {
       move(targetPath),
     ]);
 
-    return chain([mergeWith(templateSource)]);
+    return chain([
+      mergeWith(templateSource)
+    ]);
   };
 }
+

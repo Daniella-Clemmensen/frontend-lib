@@ -18,6 +18,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build": "tsc",
-    "postbuild": "copy src\\component-with-shared\\schema.json dist\\component-with-shared\\schema.json"
+"postbuild": "copy src\\component-with-shared\\schema.json dist\\component-with-shared\\schema.json && xcopy /E /I /Y src\\component-with-shared\\files dist\\component-with-shared\\files"
   }
 }
