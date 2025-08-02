@@ -12,14 +12,9 @@
       "type": "string",
       "description": "The path to create the component",
       "default": "src/app"
-    },
-    "module": {
-      "type": "string",
-      "description": "The module file to import SharedModule into"
     }
   },
   "required": [
-    "name",
-    "module"
+    "name"
   ]
 }
